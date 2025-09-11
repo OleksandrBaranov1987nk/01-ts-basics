@@ -1,19 +1,11 @@
-const enum Status {
-  Loading = "loading",
-  Success = "success",
-  Error = "error",
-}
-
-function logStatus(status: Status): void {
-  if (status === Status.Loading) {
+function logStatus(status: "loading" | "success" | "error"): void {
+  if (status === "loading") {
     console.log("Loading...");
-  } else if (status === Status.Success) {
+  } else if (status === "success") {
     console.log("Success!");
-  } else if (status === Status.Error) {
+  } else if (status === "error") {
     console.log("Something went wrong");
   }
 }
 
-logStatus(Status.Loading);
-logStatus(Status.Success);
-logStatus(Status.Error);
+logStatus("loading");
